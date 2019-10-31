@@ -1,0 +1,6 @@
+0	1	diff	same	same	nz1_30_b.tif	nz1_66_b.tif
+0	2	same	diff	diff	nz1_56_b.tif	nz1_56_a.tif
+0	3	same	same	diff	nz1_42_b.tif	nz1_42_b.tif
+0	4	diff	diff	diff	nz1_26_b.tif	nz1_65_a.tif
+0	5	same	diff	same	nz1_8_b.tif	nz1_8_a.tif
+0	6	diff	same	diff	nz1_63_a.tif	nz1_8_a.tif

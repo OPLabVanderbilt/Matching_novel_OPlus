@@ -1,0 +1,6 @@
+2	1	diff	diff	diff	ng2-f-22-b.tif	ng2-f-3-a.tif
+2	2	same	same	same	ng2-f-34-b.tif	ng2-f-34-b.tif
+2	3	same	same	same	ng2-m-6-a.tif	ng2-m-6-a.tif
+2	4	same	same	same	ng2-f-2-a.tif	ng2-f-2-a.tif
+2	5	diff	diff	diff	ng2-f-24-b.tif	ng2-f-36-a.tif
+2	6	diff	diff	diff	ng2-f-18-a.tif	ng2-f-26-b.tif
