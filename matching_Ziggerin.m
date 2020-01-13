@@ -5,7 +5,7 @@
 % Jan13, 2020 - Jason Chow
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-function matching_Ziggerins(subjno, experimenter, hand, dataDir)
+function matching_Ziggerin(subjno, experimenter, hand, dataDir)
 try
     %% Experiment parameters
     Screen('Preference', 'SkipSyncTests', 1); %%%%%% TURN THIS OFF %%%%%%%
@@ -77,7 +77,7 @@ try
     fclose(dataFile);
 
     %% Make mask
-    mask = imread('mask_Ziggerins.jpg');
+    mask = imread('mask_Ziggerin.jpg');
     mask = imresize(mask, [125 125]);
     masktexture = Screen('MakeTexture', w, mask);
 
@@ -113,7 +113,7 @@ try
     %% Practice trials
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % Read in practice trials
-    pracTrials = readtable('practice_Sheinbug.txt', ...
+    pracTrials = readtable('practice_Ziggerin.txt', ...
         'Format', '%u %u %s %s %s %s %s');
     varNames = {'Category', 'Trial', 'CorrResponse', 'Viewpoint', ...
         'Size', 'Img1', 'Img2'};
@@ -210,7 +210,7 @@ try
     %% Experimental Trials
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % Load trials
-    trials = readtable('trials_Sheinbug.txt', ...
+    trials = readtable('trials_Ziggerin.txt', ...
         'Format', '%u %u %s %s %s %s %s');
     trials.Properties.VariableNames = varNames;
 
