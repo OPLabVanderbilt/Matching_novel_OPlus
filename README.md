@@ -8,3 +8,5 @@ Dependencies:
 * instruct2.jpg
 
 Still uses the same images as the original version.
+
+NOTE THAT THIS IS RELATIVELY UNTESTED FOR IN-LAB.
