@@ -1,6 +1,0 @@
-4	1	diff	diff	diff	sb26_b.tif	sb58_a.tif
-4	2	same	diff	diff	sb64_b.tif	sb64_a.tif
-4	3	diff	diff	diff	sb81_b.tif	sb82_a.tif
-4	4	diff	same	same	sb70_b.tif	sb6_b.tif
-4	5	same	same	same	sb4_a.tif	sb4_a.tif
-4	6	same	diff	diff	sb76_a.tif	sb76_b.tif
