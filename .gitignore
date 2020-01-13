@@ -1,3 +1,4 @@
 *.jpg
 *~
 *.tif
+.DS_Store
