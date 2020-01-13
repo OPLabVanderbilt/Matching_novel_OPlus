@@ -6,3 +6,5 @@ Dependencies:
 * mask_Sheinbug.jpg
 * instruct1.jpg
 * instruct2.jpg
+
+Still uses the same images as the original version.
