@@ -1,5 +1,9 @@
 *.jpg
 *~
 *.tif
+<<<<<<< HEAD
 *.png
 *.zip
+=======
+.DS_Store
+>>>>>>> e5264f87db3584fdccae521b5145e75770fb4ba6
