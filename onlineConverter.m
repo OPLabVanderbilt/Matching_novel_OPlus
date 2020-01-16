@@ -99,8 +99,8 @@ pracTrials.Properties.VariableNames = varNames;
 for i = 1:height(pracTrials)
     % Create fixation image
     trialNum = trialNum + 1;
-    imgName = ['trial_' num2str(trialNum) '_block-0_limit-' ...
-        num2str(fixTime) '.jpg'];
+    imgName = ['trial_' num2str(trialNum) '_limit-' num2str(fixTime) ...
+        '.jpg'];
     imwrite(fixImg, ['onlineExperiment/' imgName]);
     
     % Load and resize first image
@@ -119,14 +119,14 @@ for i = 1:height(pracTrials)
         img, repmat(white, [imgSize(1)+(padding(1)*2), padding(2), 1])];
     
     % Save image 1
-    imgName = ['trial_' num2str(trialNum) '_block-0_limit-' ...
+    imgName = ['trial_' num2str(trialNum) '_limit-' ...
         num2str(img1TimeLong) '.jpg'];
     imwrite(img, ['onlineExperiment/' imgName]);
     
     % Create mask image
     trialNum = trialNum + 1;
-    imgName = ['trial_' num2str(trialNum) '_block-0_limit-' ...
-        num2str(maskTime) '.jpg'];
+    imgName = ['trial_' num2str(trialNum) '_limit-' num2str(maskTime) ...
+        '.jpg'];
     imwrite(maskImg, ['onlineExperiment/' imgName]);
     
     % Incremement counter and load image 2
@@ -158,7 +158,7 @@ for i = 1:height(pracTrials)
 
     % Save image 2
     imgName = ['trial_' num2str(trialNum), ...
-        '_block-0_sections-2_clickable-true_limit-' ...
+        '_sections-2_clickable-true_limit-' ...
         num2str(responseTime) '_isi-' num2str(intertrialInterval) '.jpg'];
     imwrite(img, ['onlineExperiment/' imgName]);
 end
@@ -167,43 +167,37 @@ end
 trialNum = trialNum + 1;
 img = imread('onlineAssets/pracEnd.png');
 imwrite(img, ['onlineExperiment/trial_' num2str(trialNum), ...
-    '_block-0_sections-1_clickable-true_isi-250.jpg']);
+    '_clickable-true_isi-250.jpg']);
 
 % Load test trials
 trials = readtable('trials_Ziggerin.txt', ...
     'Format', '%u %u %s %s %s %s %s');
 trials.Properties.VariableNames = varNames;
 
-block = 0;
 for i = 1:height(trials)
     if i > 1 && mod(i - 1, 90) == 0
         if i == 91 % Quarter way through
             trialNum = trialNum + 1;
             img = imread('onlineAssets/doneQuarter.png');
             imwrite(img, ['onlineExperiment/trial_' num2str(trialNum), ...
-                '_block-' num2str(block) ...
-                '_sections-1_clickable-true_isi-250.jpg']);
+                '_clickable-true_isi-250.jpg']);
         elseif i == 181 % Halfway through
             trialNum = trialNum + 1;
             img = imread('onlineAssets/doneHalf.png');
             imwrite(img, ['onlineExperiment/trial_' num2str(trialNum), ...
-                '_block-' num2str(block) ...
-                '_sections-1_clickable-true_isi-250.jpg']);
+                '_clickable-true_isi-250.jpg']);
         elseif i == 271 % Three quarters way through
             trialNum = trialNum + 1;
             img = imread('onlineAssets/doneThreeQuarter.png');
             imwrite(img, ['onlineExperiment/trial_' num2str(trialNum), ...
-                '_block-' num2str(block) ...
-                '_sections-1_clickable-true_isi-250.jpg']);
+                '_clickable-true_isi-250.jpg']);
         end
     end
-    % Increment block
-    block = block + 1;
     
     % Create fixation image
     trialNum = trialNum + 1;
-    imgName = ['trial_' num2str(trialNum) '_block-' num2str(block) ...
-        '_limit-' num2str(fixTime) '.jpg'];
+    imgName = ['trial_' num2str(trialNum) '_limit-' num2str(fixTime) ...
+        '.jpg'];
     imwrite(fixImg, ['onlineExperiment/' imgName]);
     
     % Load and resize first image
@@ -228,14 +222,14 @@ for i = 1:height(trials)
         img1Time = img1TimeShort;
     end
         
-    imgName = ['trial_' num2str(trialNum) '_block-' num2str(block) ...
-        '_limit-' num2str(img1Time) '.jpg'];
+    imgName = ['trial_' num2str(trialNum) '_limit-' num2str(img1Time) ...
+        '.jpg'];
     imwrite(img, ['onlineExperiment/' imgName]);
     
     % Create mask
     trialNum = trialNum + 1;
-    imgName = ['trial_' num2str(trialNum) '_block-' num2str(block) ...
-        '_limit-' num2str(maskTime) '.jpg'];
+    imgName = ['trial_' num2str(trialNum) '_limit-' num2str(maskTime) ...
+        '.jpg'];
     imwrite(maskImg, ['onlineExperiment/' imgName]);
     
     % Incremement counter and load image 2
@@ -266,9 +260,9 @@ for i = 1:height(trials)
         'BoxOpacity', 0, 'AnchorPoint', 'Center'); 
 
     % Save image 2
-    imgName = ['trial_' num2str(trialNum), ...
-        '_block-' num2str(block) '_sections-2_clickable-true_limit-' ...
-        num2str(responseTime) '_isi-' num2str(intertrialInterval) '.jpg'];
+    imgName = ['trial_' num2str(trialNum) ...
+        '_sections-2_clickable-true_limit-' num2str(responseTime) ...
+        '_isi-' num2str(intertrialInterval) '.jpg'];
     imwrite(img, ['onlineExperiment/' imgName]);
 end
 
